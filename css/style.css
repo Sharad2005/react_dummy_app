@@ -1,0 +1,22 @@
+.header1 {
+  height: 45vh;
+  background-image: linear-gradient(to right bottom, rgba(255, 118, 118, 0.666), rgba(71, 142, 248, 0.666)), url(../img/R92f15206673a98da8465eb1831e521e5.png);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+
+.background {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center; }
+
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5rem; }
+
+.btn-background {
+  background-color: black; }
