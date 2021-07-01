@@ -1,7 +1,7 @@
-import ExpenceItems from "./ExpenseItems"
-function Expense (props){
-return(
-    <div className='expenses'>
+import ExpenceItems from "./ExpenseItems";
+function Expense(props) {
+  return (
+    <div className="expenses">
       <ExpenceItems
         title={props.items[0].title}
         amount={props.items[0].amount}
@@ -23,6 +23,6 @@ return(
         date={props.items[3].date}
       ></ExpenceItems>
     </div>
-)
+  );
 }
-export default Expense
+export default Expense;
