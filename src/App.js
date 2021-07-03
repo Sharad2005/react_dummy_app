@@ -1,9 +1,9 @@
-import "./components/Expensoutput/Expense.css"
+
+import "./components/Expensoutput/Expense.css";
 import React, { useState } from "react";
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expense from "./components/Expensoutput/Expense";
 import ExpenseDate from "./components/Expensoutput/ExpenseDate";
-import { from } from "pumpify";
 const dammy_Expenses = [
   {
     id: "e1",
@@ -26,14 +26,12 @@ const dammy_Expenses = [
   },
 ];
 function App() {
-  const[expenses, setExpenses]=useState(dammy_Expenses)
-  function addnewexpensedata(expense){
-    setExpenses(
-      function (prevExpenses){
-        return [expense, ...prevExpenses]
-      }
-    );
-};
+  const [expenses, setExpenses] = useState(dammy_Expenses);
+  function addnewexpensedata(expense) {
+    setExpenses(function (prevExpenses) {
+      return [expense, ...prevExpenses];
+    });
+  }
   return (
     <div>
       <NewExpense onsaveexpensedata={addnewexpensedata} />

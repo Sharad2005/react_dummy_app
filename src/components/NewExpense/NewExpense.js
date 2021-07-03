@@ -2,16 +2,25 @@ import React, { useState } from "react";
 import "./NewExpense.css";
 import Expenseform from "./Expenseform";
 function NewExpense(props) {
-function saveExpenseDataHandler(eneterdExpenseData){
-const ExpenseData={
-  ...eneterdExpenseData,
-  id: Math.random().toString()
-};
-props.onsaveexpensedata(ExpenseData)
-}
+  
+  const[NoFormSubmit, FormSubmit]=useState(false);
+  function saveExpenseDataHandler(eneterdExpenseData) {
+    const ExpenseData = {
+      ...eneterdExpenseData,
+      id: Math.random().toString(),
+    };
+    props.onsaveexpensedata(ExpenseData);
+  }
+  function ShowForm(){
+FormSubmit(true);
+  };
+  function stopShowForm(){
+    FormSubmit(false)
+  }
   return (
     <div className="new-expense">
-      <Expenseform onSaveExpenseData={saveExpenseDataHandler}/>
+      {!NoFormSubmit&& <button onClick={ShowForm}>Add New Expense</button>}
+      {NoFormSubmit&&<Expenseform onSaveExpenseData={saveExpenseDataHandler} oncancle={stopShowForm}/>}
     </div>
   );
 }
