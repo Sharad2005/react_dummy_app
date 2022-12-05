@@ -7,7 +7,7 @@ import ExpenseDate from "./components/Expensoutput/ExpenseDate";
 const dammy_Expenses = [
   {
     id: "e1",
-    title: "Toilet Paper",
+    title: "books",
     amount: 94.12,
     date: new Date(2020, 7, 14),
   },
